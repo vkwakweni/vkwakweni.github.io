@@ -67,7 +67,7 @@ Two-thirds of the data I needed required some level of web scraping. Previously,
 
 ### Heads of Government
 
-The first step in data mining was looking for heads of government; these are the objects of our analysis. Given the early development of this project, I chose a dataset that presented the most parse-able format. Using [Brambor et al.'s *The Heads of Government Dataset*](https://www.johanneslindvall.org/data.html#:~:text=The%20*Heads%20of%20Government%20Dataset*%20is%20a,.dta%20*%20Country%2Dyear%20.dta%20*%20Country%2Dyear%20.csv), I was able to get information on the heads of government in 33 countries in 2002 and 2020. The parsing script for this can be found in [naive-parsing-hog](https://www.github.com/vkwakweni/sentiment-analyis/naive-parsing-hog.R).
+The first step in data mining was looking for heads of government; these are the objects of our analysis. Given the early development of this project, I chose a dataset that presented the most parse-able format. Using [Brambor et al.'s *The Heads of Government Dataset*](https://www.johanneslindvall.org/data.html#:~:text=The%20*Heads%20of%20Government%20Dataset*%20is%20a,.dta%20*%20Country%2Dyear%20.dta%20*%20Country%2Dyear%20.csv), I was able to get information on the heads of government in 33 countries in 2002 and 2020. The parsing script for this can be found in [naive-parsing-hog](https://github.com/vkwakweni/sentiments/blob/main/naive-parsing-hog.R).
 
 I was very surprised to see that there was no unified, mostly exhaustive historical dataset of heads of governments. Most of the ones I was able to find were websites, which would require a script for scraping. Perhaps the closest I got to access an exhaustive list with a clean UI was the US's CIA website, but they don't allow web scraping as part of their terms of service.
 
@@ -97,7 +97,7 @@ This immediately shows the pitfalls of a naive analysis of any text: it is more 
 
 ## Analysis
 
-This section follows the script [naive-analysis-hog](https://www.github.com/vkwakweni/sentiment-analyis/naive-analysis-hog.R), explaining the different data objects created and their intended use.
+This section follows the script [naive-analysis-hog](https://github.com/vkwakweni/sentiments/blob/main/naive-analysis.R), explaining the different data objects created and their intended use.
 
 For this naive sentiment analysis, I used the NRC Emotion Lexicon for labelling words with sentiments. For ease, I used the [already processed version](https://ladal.edu.au/tutorials/sentiment/sentiment.html) by _Language Technology and Data Analysis Laboratory_, which had a shape of `13872x2`, loading it with this comamnd:
 
