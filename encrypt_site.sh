@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# set human-readbale password
+# set human-readable password
 
 PASSWORD="portfolio2026"
 
