@@ -10,7 +10,7 @@ echo "Starting vkwakweni portfolio site encryption..."
 
 find ./build -name "*.html" | while read -r file; do
     echo "Encrypting: $file"
-    npx staticrypt "$file" -p "$PASSWORD" -o "$file" --short
+    npx staticrypt "$file" -p "$PASSWORD" -o "$file" --short -e
 done
 
 echo "All HTML pages successfully encrypted!"
