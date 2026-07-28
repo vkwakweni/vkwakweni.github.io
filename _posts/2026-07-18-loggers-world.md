@@ -3,9 +3,9 @@ layout: post
 title: Logger's World — Serverless, NoSQL Generic Logging Application
 summary: Walks through the development of a generic logging and tracking application built on a fully serverless AWS stack (Cognito, Lambda, DynamoDB, CDK) over a solo, 7-day SDLC sprint.
 author: vuyokwakweni
-date: "2026-07-19"
-category: application
-thumbail:
+date: "2026-07-28"
+category: web-application
+thumbnail: /assets/img/posts/log-wood.png
 keywords:
 permalink: /blog/loggers-world-init
 ---
