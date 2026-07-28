@@ -14,22 +14,16 @@ else{
  */
 function modeSwitcher() {
 
-	switch ( localStorage.getItem('color-theme') ){
-		case 'dark':
-			$('.theme-toggle').removeAttr('checked');
-		break;
-		case 'light':
-			$('.theme-toggle').attr('checked','');
-		break;
-	}
+	updateThemeIcon();
 
-    /* 
+    /*
      * dark-light mode-switcher
-     * Change the icons inside the button based on previous settings
+     * Swap the sun/moon icon to reflect the active theme
      */
-    $('.theme-toggle').off('click').on('click', function() {
+    $('.theme-toggle').off('click').on('click', function(e) {
+        e.preventDefault();
 
-        // if exists and set via local storage previously
+		// if exists and set via local storage previously
 		if ($(document.documentElement).attr('data-theme') === "dark" ) {
 			document.documentElement.setAttribute('data-theme', 'light');
 			localStorage.setItem('color-theme', 'light');
@@ -37,6 +31,12 @@ function modeSwitcher() {
 			document.documentElement.setAttribute('data-theme', 'dark');
 			localStorage.setItem('color-theme', 'dark');
 		}
-        
+
+		updateThemeIcon();
     });
+}
+
+function updateThemeIcon() {
+	var isDark = $(document.documentElement).attr('data-theme') === 'dark';
+	$('.theme-toggle-icon').toggleClass('fa-moon', isDark).toggleClass('fa-sun', !isDark);
 }
