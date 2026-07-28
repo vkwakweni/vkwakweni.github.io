@@ -711,8 +711,10 @@ header {
 
 #author_projects {
     .project-img {
-        width: 300px;
+        width: 100%;
+        max-width: 300px;
         height: 200px;
+        object-fit: contain;
     }
     #project-card{
         margin-top:30px;
@@ -724,8 +726,10 @@ header {
 
 
 .company-logo {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    object-fit: contain;
 }
 
 .author-profile-img {
