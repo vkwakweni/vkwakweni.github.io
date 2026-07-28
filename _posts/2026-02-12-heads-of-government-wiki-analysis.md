@@ -3,7 +3,7 @@ layout: post
 title: Heads of Government Wikipedia Page Sentiment Analysis Using R (Part 1)
 summary: Evaluates the polarity of the Wikipedia pages of heads of government during the years 2002 and 2020 using R.
 author: vuyokwakweni
-data: "2026-02-12"
+date: "2026-02-12"
 category: data-science
 thumbnail: /assets/img/posts/wikipedia.png
 keywords: data-science, sentiment-analysis, R
