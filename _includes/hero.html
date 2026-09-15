@@ -6,7 +6,23 @@
     text-align: center;
     background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+    background-position: center top;
+    position: relative;
+    min-height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.jumbotron::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, var(--main-background-color));
+  pointer-events: none;
 }
 .jumbotron-btns {
   display: block;
@@ -16,12 +32,19 @@
 .jumbotron-heading, .lead {
   color: #fff;
 }
+
+.jumbotron-subheading {
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
 </style>
 
 <!-- home hero section -->
 <div class="jumbotron">
-  <img class="author-profile-img" src="{{site.url}}{{site.baseurl}}/assets/img/{{site.author_logo}}" />
-  <p class="jumbotron-heading">Hi, I am {{site.author}} !</p>
+  <p class="jumbotron-heading">The future is made, not told</p>
+  <p class="jumbotron-subheading">Vuyo Kwakweni: Software developer | Data Analyst | Web Developer</p>
 
   <p class="lead" id="typewriteText"></p>
   <span>
