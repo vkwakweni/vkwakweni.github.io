@@ -592,7 +592,22 @@ header {
         color: var(--main-text-color);
     }
 }
-.fb_iframe_widget span{vertical-align:inherit !important;}
+.share-btn {
+    display: inline-block;
+    margin: 4px 4px 8px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    color: #fff !important;
+    font-weight: 600;
+    text-decoration: none !important;
+
+    .fab {
+        color: #fff;
+        font-size: 16px;
+    }
+}
+.share-linkedin { background: #0a66c2; }
+.share-whatsapp { background: #25d366; }
 
 /* floating btn for buy me coffee */
 #bmc-wbtn{
@@ -675,6 +690,56 @@ header {
     padding-left: 5px;
     padding-top: 2px;
     margin: 5px;
+}
+.category-page {
+    border-color: var(--underline-color) !important;
+
+    .category-name {
+        white-space: nowrap;
+    }
+    #recent-articles-show-all .btn {
+        color: var(--bold-color) !important;
+        border: 1px solid var(--underline-color);
+    }
+    .article-card {
+        border-color: var(--underline-color);
+    }
+    .recent-article-link time {
+        color: var(--light-text-color);
+    }
+    #recent-articles-header {
+        align-items: start;
+    }
+}
+@media (max-width: 767px) {
+    #recent-articles.category-page {
+        margin: 30px 16px 0 !important;
+        padding: 18px;
+
+        #recent-articles-header {
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+        .card-title {
+            font-size: 1.9rem;
+        }
+        #recent-articles-show-all {
+            justify-self: start;
+        }
+        #recent-articles-show-all .btn {
+            font-size: 0.85rem;
+            padding: 3px 10px;
+        }
+        ul {
+            margin-left: 0 !important;
+        }
+        #article-container {
+            grid-template-columns: 44px 1fr;
+        }
+        .recent-article-link {
+            font-size: 18px;
+        }
+    }
 }
 .recent-article-link{
     font-size: 20px;
@@ -775,7 +840,61 @@ header {
 .author-profile-img {
     width: 150px;
     height: 150px;
+    max-width: none;
+    flex-shrink: 0;
+    object-fit: cover;
+    object-position: center top;
     border-radius: 50%;
+}
+
+.profile-about {
+    margin: 14px auto 18px;
+    max-width: 34em;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--medium-text-color);
+}
+
+.author-card-inner {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+.author-card-text {
+    flex: 1 1 240px;
+    min-width: 0;
+}
+.author-card-label {
+    margin: 0 0 2px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--highlight-color);
+}
+.author-card-name {
+    margin: 0 0 8px;
+    color: var(--bold-color);
+    font-size: 24px;
+}
+.author-card .author_bio {
+    color: var(--medium-text-color);
+    margin-bottom: 14px;
+}
+.author-card-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 12px !important;
+
+    li {
+        margin-bottom: 6px;
+        overflow-wrap: anywhere;
+    }
+    .fas {
+        color: var(--highlight-color);
+        font-size: 14px;
+        margin-right: 8px;
+    }
 }
 
 .blog-post {
@@ -1101,7 +1220,7 @@ footer {
  .highlight pre { background-color: #212529; padding: 20px;}
 .highlight .hll { background-color: #272822; }
 .highlight .c { color: #75715e } /* Comment */
-.highlight .err { color: #960050; background-color: #1e0010 } /* Error */
+.highlight .err { color: #f8f8f2; background-color: transparent } /* Error (unparseable tokens, e.g. partial HTTP requests) */
 .highlight .k { color: #66d9ef } /* Keyword */
 .highlight .l { color: #ae81ff } /* Literal */
 .highlight .n { color: #f8f8f2 } /* Name */
@@ -1162,3 +1281,48 @@ footer {
 .highlight .gu { color: #75715e; } /* Generic.Subheading & Diff Unified/Comment? */
 .highlight .gd { color: #f92672; } /* Generic.Deleted & Diff Deleted */
 .highlight .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
+/* Tables in post content */
+#blog-post-container table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+
+    th, td {
+        padding: 10px 14px;
+        border: 1px solid var(--underline-color);
+        vertical-align: top;
+        text-align: left;
+    }
+    th {
+        color: var(--bold-color);
+        background-color: var(--box-background-color);
+        white-space: nowrap;
+    }
+    tbody tr:nth-child(even) td {
+        background-color: var(--newsletter-background-color);
+    }
+    code {
+        overflow-wrap: anywhere;
+    }
+}
+
+/* Collapsed navbar: keep search/theme icons on the top row, indent the links */
+@media (max-width: 991px) {
+    #topNav {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+
+        .navbar-collapse {
+            order: 3;
+            width: 100%;
+        }
+        .navbar-nav .nav-link {
+            padding: 10px 20px;
+        }
+    }
+}
