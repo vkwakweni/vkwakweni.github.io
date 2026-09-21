@@ -141,8 +141,6 @@ paginate_path: "/blog/page/:num/"
 collections:
   products:
     output: false
-  authors:
-    output: false
 
 defaults:
   # -
@@ -150,13 +148,6 @@ defaults:
   #     path: "gallery"
   #   values:
   #     permalink: /:path/:basename:output_ext
-  -
-    scope:
-      path: ""
-      type: authors
-    values:
-      layout: author
-      permalink: /blog/authors/:slug
   -
     scope:
       path: 'assets/**'
