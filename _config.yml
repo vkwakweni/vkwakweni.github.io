@@ -19,7 +19,7 @@ urls:
 
 author_logo: profile.png
 author: Vuyo Kwakweni
-author_bio: As recent computer science graduate from the University of Pécs, I am passionate about leveraging software and data to solve real-world problems and collaborating with like-minded individuals in the tech community.
+author_bio: As recent computer science graduate who has lived, studied, and worked across three continents, I am passionate about leveraging software and data to solve real-world problems and collaborating with like-minded individuals in the tech community.
 author_email: "vuyo-dev@literaturelounge.org"
 author_location: South Africa
 author_website_url: "https://literaturelounge.org"
@@ -62,6 +62,13 @@ author_project_details:
                project_title: Logger's World
                project_description:  Serverless, NoSQL Generic Logging Application
                project_url: https://loggersworld.literaturelounge.org
+               project_writeup: /blog/loggers-world-init
+               visibility: true
+             - project_thumbnail: posts/turaco-logo.svg
+               project_title: Turaco Chorus
+               project_description: Containerised AI insight microservice built with hexagonal architecture
+               project_url: https://github.com/vkwakweni/turaco-chorus
+               project_writeup: /blog/turaco-chorus
                visibility: true
       #        - project_thumbnail: hack4r.PNG
        #         project_title: Hack4r
