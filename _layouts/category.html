@@ -1,0 +1,41 @@
+---
+layout: default
+---
+{% assign category_posts = site.categories[page.category_name] %}
+<div class="row justify-content-center">
+  <div class="col-lg-8 col-md-10">
+    <section id="recent-articles" class="category-page">
+      <div id="recent-articles-header">
+        <div id="recent-articles-title">
+          <h1 class="card-title">Category: <span class="category-name">{{ page.category_name }}</span></h1>
+        </div>
+        <div id="recent-articles-show-all">
+          <a class="btn btn-lg btn-dark" href="{{ site.baseurl }}/blog/categories/">All categories</a>
+        </div>
+      </div>
+      <br />
+      {% if category_posts and category_posts.size > 0 %}
+      <ul>
+        {% for post in category_posts %}
+        <li class="article-card">
+          <a href="{{ site.baseurl }}{{ post.url }}" class="article-card-link">
+            <div id="article-container">
+              <div id="article-img">
+                {% if post.thumbnail %}
+                <img src="{{ site.url }}{{ site.baseurl }}{{ post.thumbnail }}" width="50px" height="50px" />
+                {% endif %}
+              </div>
+              <div id="article-link">
+                <p class="recent-article-link">{{ post.title }} <span style="color: #ccc; font-size: 15px; white-space: nowrap;"> - <i><time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time></i></span></p>
+              </div>
+            </div>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>No posts in this category yet.</p>
+      {% endif %}
+    </section>
+  </div>
+</div>
