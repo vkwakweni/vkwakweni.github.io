@@ -14,6 +14,8 @@ urls:
       url: /about
     - text: Blog
       url: /blog
+    - text: Journey
+      url: /journey/
 
 # Edit Author details (For multi authors check _data/authors.yml)
 
