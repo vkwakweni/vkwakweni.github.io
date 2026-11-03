@@ -1,7 +1,7 @@
 title: Vuyo.dev
 subtitle: Computer Scientist | Application Developer | Data Science Enthusiast
 description: >- # this means to ignore newlines until "baseurl:"
-  I'm is passionate about leveraging software and data to solve real-world problems.
+  I'm passionate about leveraging software and data to solve real-world problems.
 
 url: "https://vkwakweni.github.io" # the base hostname & protocol for your site, e.g. https://example.github.io
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -21,7 +21,7 @@ urls:
 
 author_logo: profile.png
 author: Vuyo Kwakweni
-author_bio: As recent computer science graduate who has lived, studied, and worked across three continents, I am passionate about leveraging software and data to solve real-world problems and collaborating with like-minded individuals in the tech community.
+author_bio: A recent computer science graduate who has lived, studied, and worked across three continents, I am passionate about leveraging software and data to solve real-world problems and collaborating with like-minded individuals in the tech community.
 author_email: "vuyo-dev@literaturelounge.org"
 author_location: South Africa
 author_website_url: "https://literaturelounge.org"
@@ -39,8 +39,8 @@ author_work_experiences:
             - company_name: University of Pécs
               company_logo: pte.png
               company_url: https://international.pte.hu/
-              designation: Teaching Assisant
-              description: Assisted in student computer environmetn set up and troubleshooting, and provided support for course materials and assignments.
+              designation: Teaching Assistant
+              description: Assisted in student computer environment setup and troubleshooting, and provided support for course materials and assignments.
               visibility: true
             - company_name: Maqubs Academy of Excellence
               company_logo: maqubs.png
